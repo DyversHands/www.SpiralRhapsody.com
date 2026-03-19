@@ -10,13 +10,13 @@ layout: default
         <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
         <nav>
             <ul>
-                <li><a href="#footer" class="icon fa-info-circle">About</a></li>
+                <li><a href="#footer">About&nbsp;&nbsp;<i class="fa fa-info-circle text-fg"></i></a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main -->
-    <div id="main">
+    <div id="main" data-exif='{{ site.exif }}'>
         {% for image in site.static_files %}
         {% if image.path contains 'fulls' %}
         <article class="thumb">
@@ -45,42 +45,42 @@ layout: default
                     <ul class="icons">
                         {% if site.social_urls.facebook %}
                             <li>
-                                <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
+                                <a href="{{ site.social_urls.facebook }}" class="icon brands fa-facebook">
                                     <span class="label">Facebook</span>
                                 </a>
                             </li>
                         {% endif %}
                         {% if site.social_urls.twitter %}
                             <li>
-                                <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
+                                <a href="{{ site.social_urls.twitter }}" class="icon brands fa-twitter">
                                     <span class="label">Twitter</span>
                                 </a>
                             </li>
                         {% endif %}
                         {% if site.social_urls.instagram %}
                             <li>
-                                <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
+                                <a href="{{ site.social_urls.instagram }}" class="icon brands fa-instagram">
                                     <span class="label">Instagram</span>
                                 </a>
                             </li>
                         {% endif %}
                         {% if site.social_urls.dribbble %}
                             <li>
-                                <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
+                                <a href="{{ site.social_urls.dribbble }}" class="icon brands fa-dribbble">
                                     <span class="label">Dribbble</span>
                                 </a>
                             </li>
                         {% endif %}
                         {% if site.social_urls.github %}
                             <li>
-                                <a href="{{ site.social_urls.github }}" class="icon fa-github">
+                                <a href="{{ site.social_urls.github }}" class="icon brands fa-github">
                                     <span class="label">GitHub</span>
                                 </a>
                             </li>
                         {% endif %}
                         {% if site.social_urls.linkedin %}
                             <li>
-                                <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
+                                <a href="{{ site.social_urls.linkedin }}" class="icon brands fa-linkedin">
                                     <span class="label">LinkedIn</span>
                                 </a>
                             </li>
@@ -88,7 +88,7 @@ layout: default
                     </ul>
                 </section>
                 <p class="copyright">
-                    Images curated by: {{ site.web_design }} - &copy; {{ site.author }}. 
+                    Images curated by: {{ site.web_design }} - &copy; {{ site.author }}.
                 </p>
             </div>
             <div>
