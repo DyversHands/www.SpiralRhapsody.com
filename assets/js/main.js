@@ -203,19 +203,35 @@
 	  });
 	});
   
+	// Credits data from _config.yml.
+	var imageCredits = $main.data('credits') || {};
+
 	// Poptrox.
 	$main.poptrox({
 	  baseZIndex: 20000,
 	  caption: function ($a) {
 		var $image_img = $a.children('img');
-		var data = exifDatas[$image_img.data('name')];
+		var name = $image_img.data('name');
+		var parts = [];
+
+		// Credit from _config.yml
+		var credit = imageCredits[name];
+		if (credit) {
+			parts.push('<i class="fa fa-image" aria-hidden="true"></i> <a href="' + credit.url + '" target="_blank" rel="noopener">' + credit.text + '</a>');
+		}
+
+		// EXIF data
+		var data = exifDatas[name];
 		if (data === undefined) {
-			// EXIF data					
 			EXIF.getData($image_img[0], function () {
-				data = exifDatas[$image_img.data('name')] = getExifDataMarkup(this);
+				data = exifDatas[name] = getExifDataMarkup(this);
 			});
 		}
-		return data !== undefined ? '<p>' + data + '</p>' : ' ';
+		if (data) {
+			parts.push(data);
+		}
+
+		return parts.length > 0 ? '<p>' + parts.join('&nbsp;&nbsp;&nbsp;') + '</p>' : ' ';
 	},
 	  fadeSpeed: 300,
 	  onPopupClose: function () {

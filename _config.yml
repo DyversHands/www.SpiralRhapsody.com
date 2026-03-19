@@ -32,3 +32,42 @@ social_urls:
 # Configure which exif data to display
 # Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
 exif: '[{"tag": "Model", "icon": "fa fa-camera-retro"}, {"tag": "FNumber", "icon": "far fa-dot-circle"}, {"tag": "ExposureTime", "icon": "far fa-clock"}, {"tag": "ISOSpeedRatings", "icon": "fa fa-info-circle"}]'
+
+# Image credits: maps filename (with extension) to credit text and source URL
+credits:
+  cinnamon-rolls-1417494.jpg:
+    text: "Cinnamon Rolls — Pixabay"
+    url: "https://pixabay.com/photos/cinnamon-rolls-bread-spiral-baking-1417494/"
+  dabbas-yvRM0G3nUuU-unsplash.jpg:
+    text: "Dabbas — Unsplash"
+    url: "https://unsplash.com/photos/yvRM0G3nUuU"
+  dna-5591477.jpg:
+    text: "DNA Double Helix — Pixabay"
+    url: "https://pixabay.com/illustrations/dna-double-helix-sustainability-5591477/"
+  hurricane-92968.jpg:
+    text: "Hurricane — Pixabay"
+    url: "https://pixabay.com/photos/hurricane-earth-satellite-tracking-92968/"
+  joshua-j-cotten-2idWld85f-M-unsplash.jpg:
+    text: "Joshua J. Cotten — Unsplash"
+    url: "https://unsplash.com/photos/2idWld85f-M"
+  laura-ockel-ZLGFy3dNWfo-unsplash.jpg:
+    text: "Laura Ockel — Unsplash"
+    url: "https://unsplash.com/photos/ZLGFy3dNWfo"
+  nature-1157479.jpg:
+    text: "Zen Stones — Pixabay"
+    url: "https://pixabay.com/photos/nature-rocks-zen-sand-stones-costa-1157479/"
+  philippe-d-uxnWliBKBkg-unsplash.jpg:
+    text: "Philippe D — Unsplash"
+    url: "https://unsplash.com/photos/uxnWliBKBkg"
+  potw2109a.jpg:
+    text: "Hubble Blue Galaxy — NASA"
+    url: "https://www.nasa.gov/image-feature/goddard/2021/hubble-beholds-a-big-beautiful-blue-galaxy"
+  robert-lukeman-_RBcxo9AU-U-unsplash.jpg:
+    text: "Robert Lukeman — Unsplash"
+    url: "https://unsplash.com/photos/_RBcxo9AU-U"
+  rose-1454332.jpg:
+    text: "Rhapsody in Blue Rose — Pixabay"
+    url: "https://pixabay.com/photos/rose-rhapsody-in-blue-blue-rose-1454332/"
+  stained-glass-1181864.jpg:
+    text: "Stained Glass Spiral — Pixabay"
+    url: "https://pixabay.com/photos/stained-glass-spiral-circle-pattern-1181864/"
