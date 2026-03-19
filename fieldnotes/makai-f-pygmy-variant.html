@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Makai F Pygmy Variant — Field Notes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+<div class="site-header">
+  <div class="site-title"><a href="index.html">Field Notes on Handpan Sound Models &amp; Instruments</a></div>
+  <div class="header-line"></div>
+  <div class="header-right" style="position:relative">
+    <a class="md-link" href="makai-f-pygmy-variant.md">↓ md</a>
+    <button class="nav-trigger" id="nav-trigger">All Instruments ▾</button>
+    <div id="nav-popup" class="nav-popup">
+        <div class="nav-popup-label">Instruments</div>
+        <a class="nav-popup-item current" href="makai-f-pygmy-variant.html">Makai F Pygmy Variant</a>
+        <a class="nav-popup-item" href="panart-hang-g-pygmy.html">Panart Hang G Pygmy</a>
+        <a class="nav-popup-item" href="pantheon-halo-c-xxd.html">Pantheon Halo C XXD</a>
+        <div class="nav-popup-divider"></div>
+        <a class="nav-popup-home" href="index.html">← Index</a>
+      </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="card-maker" id="card-maker"></div>
+      <div class="card-type" id="card-type"></div>
+    </div>
+    <div>
+      <div class="card-key-label">Key</div>
+      <div class="card-key" id="card-key"></div>
+      <div class="card-formula" id="card-formula"></div>
+      <div class="card-key" id="card-ensemble-key" style="margin-top:0.4rem"></div>
+      <div class="card-formula" id="card-ensemble-formula"></div>
+    </div>
+  </div>
+
+  <div class="tone-section">
+    <div class="tone-label">Tone Layout <span>· tap to play</span></div>
+    <div class="tone-circle">
+      <div class="tone-ring" id="tone-ring">
+        <div class="ring-decoration"></div>
+      </div>
+    </div>
+    <div class="bass-wrap">
+      <button class="bass-btn" id="bass-btn"></button>
+    </div>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+
+  <div class="tab-content">
+    <div class="tab-panel active" id="panel-overview"></div>
+    <div class="tab-panel" id="panel-modes"></div>
+    <div class="tab-panel" id="panel-harmony"></div>
+    <div class="tab-panel" id="panel-chords"></div>
+    <div class="tab-panel" id="panel-clashes"></div>
+  </div>
+</div>
+
+<div class="footer">FIELD NOTES ON HANDPAN SOUND MODELS &amp; INSTRUMENTS · <span id="year"></span></div>
+
+</div><!-- .page-wrap -->
+
+<script>
+const INSTRUMENT = {
+  id:1, brand:"Makai", type:"Handpan", selectorName:"Makai F Pygmy Variant", ding:"F3",
+  toneNotes:["G3","Ab3","C4","Eb4","F4","G4","Ab4","C5"],
+  extraBass:"D2",
+  scaleName:"Pygmy Variant",
+  scaleAliases:["Dorian Pentatonic","Man Gong","Minor 6 Pentatonic","Aka/Ba-Benzélé Pygmy Scale"],
+  key:"F Minor", ensembleKey:"Bb Minor", formula:"1 – 2 – ♭3 – 5 – ♭7", ensembleFormula:"2 – 4 – 5 – 6 – ♭7",
+  pitchClasses:["F","G","Ab","C","Eb"],
+  tonalAnchor:"F Minor — the Ding anchors here when played alone; everything resolves to F.",
+  harmonicIdentity:"Bb Minor — the 5th degree of Bb minor, fitting naturally into any Bb minor ensemble as a Bb Dorian voice.",
+  compatibleKeys:["F Natural Minor","F Dorian","Bb Natural Minor","Ab Major"],
+  modalCenterKeys:[{key:"C Natural Minor", mode:"C Aeolian", desc:"All five notes are at home here, but the Ding is still F — the instrument visits C minor as a modal voice rather than serving it as an ensemble instrument. Speaks C Aeolian fluently; does not belong to it."}],
+  playableKeys:[{key:"Bb Minor",note:"G",reason:"G natural vs G♭ — raised 6th, mild color tension."}],
+  playsWellWith:[
+    {id:2, name:"Panart Hang G Pygmy", url:"panart-hang-g-pygmy.html", sharedNotes:["G","C","Eb"], context:"C Minor", desc:"3 shared notes. Best played in C minor — Ab and Bb both sit naturally in C Natural Minor. Zero clashes in that context."},
+    {id:3, name:"Pantheon Halo C XXD", url:"pantheon-halo-c-xxd.html", sharedNotes:["F","G","Ab","C","Eb"], context:"F Dorian / C Minor", desc:"XXD contains all 5 Pygmy Variant notes plus D. Zero clashes. D is the natural 6th of F Dorian — additive, not conflicting."}
+  ],
+  clashKeys:["A Minor","D Minor"],
+  clashNotes:{
+    "Bb Minor":[{note:"G",reason:"Bb minor expects G♭ — G natural sounds as a raised 6th. Mild color tension, the softest clash of the three."}],
+    "A Minor":[{note:"Ab",reason:"Ab is a flattened root against A — a chromatic half-step clash right at the tonal center."},{note:"Eb",reason:"Eb is a tritone (♭5th) against A — the most dissonant interval."}],
+    "D Minor":[{note:"Ab",reason:"Ab is a tritone against D — D minor expects A natural. The harshest clash."},{note:"Eb",reason:"Eb is a ♭2nd against D — D minor expects E natural. Sharp dissonance against the root."}]
+  },
+  character:"Meditative, soulful, harmonically open. No tritone tension. Minor with a bright 2nd.",
+  voice:{
+    text:"Earthy and ceramic — intimate, percussive, short-decaying. Notes separate cleanly; phrases don't blur. The upper register carries a subtle shimmer as notes decay[1] — a liveliness rather than a pure ring. Beneath every note, a D resonates in the body[2] — a pitch foreign to the scale, adding a dark undertow that feels slightly unmoored from the melody. And the decay itself carries a barely audible F♯ ghost[3] — the tritone of C — so notes don't fade cleanly into silence but trail off with a faint, searching tension.",
+    footnotes:[
+      "The 53 cm shell creates wave interference (sometimes called impedance) centered around Bb4. Ab4 sits just below this zone and rings cleanly; C5 sits above it. The result is a subtle asymmetry in the upper register — Ab4 is pure, C5 carries a faint shimmer or wobble in the sustain. This is a character trait of this shell size, not a flaw.",
+      "The Gu port acts as a Helmholtz resonator — air oscillating in and out adds a low cavity tone beneath every note. Here it is tuned to D2, a pitch not in the Pygmy Variant scale, so it adds a slightly detached dark undertow rather than reinforcing the root. It is felt more than heard.",
+      "The steel shell carries a faint F♯2/F♯3 ghost resonance — a structural artifact, not a tuned element. F♯ is the tritone of C, one of the instrument's central notes. When C is played, a barely audible tritone shimmer appears briefly in the decay before dissolving."
+    ]
+  },
+  soundModel:{text:"Pygmy Variant — replaces the 4th and ♭6 with a natural 2nd and ♭7, removing the notes that would commit it to a single mode. Three equally valid homes: F Dorian, C Aeolian, G Phrygian. Jazzier, more open, harmonically restless. The Ding sits on the 5th degree of Bb minor[1] — in ensemble, the instrument naturally voices as Bb Dorian.",footnotes:["When a handpan's Ding sits on the 5th of a minor key, the instrument slots into ensemble as a Dorian voice for that key. Dorian shares all notes with natural minor but has a raised 6th, giving it a brighter, more outward-facing character. The F Ding is the 5th of Bb minor — so in a Bb minor ensemble, this instrument contributes a Bb Dorian flavor even while playing in its own F-rooted mode."]},
+  soundModelCharacter:"The Ding F3 is flanked by G3 and Ab3 — a half-step scrape that creates immediate tension. Phrases that touch both pull hard against each other and want to resolve down to F or climb away. The low conversation is unsettled; the instrument rewards players who lean into that friction rather than avoid it.",
+  origin:{text:"A handpan-era variation on the Pygmy Classic.[1] Replacing the ♭6 with a natural 2nd and ♭7 opens three modal homes instead of one — and breaks any direct lineage to the African source tradition.[2]",footnotes:["The Pygmy Classic derives from Ba-Benzélé vocal tradition via the Panart Hang. The Variant is a derivative scale developed within the handpan world, retaining the same pentatonic interval fingerprint but shifted to a different modal rotation. Also known as Dorian Pentatonic and Man Gong.","Whether the Variant has any independent cultural origin is not established. It is best understood as a modal reframing of the Classic — same DNA, different tonal center of gravity."]},
+  maker:"David Galleher", madeDate:"January 2020",
+  material:"Nitrided steel", construction:{text:"53 cm hydroformed shell",footnote:"Hydroforming uses high-pressure fluid to press a steel blank into a mold, producing a very consistent and symmetrical shell geometry. The 53 cm diameter places the primary wave interference zone in the upper register around Bb4."},
+  serialNumber:null, makersMark:null,
+  modalCenters:[
+    {root:"F",mode:"Dorian",notes:["F","G","Ab","C","Eb"],formula:"1 – 2 – ♭3 – 5 – ♭7",character:"Soulful, open, jazzy minor. The Ding anchors this center — the instrument's natural home.",fingerprint:"Natural 2nd (G) beside a minor 3rd (Ab) — brighter than pure minor.",range:"Full instrument"},
+    {root:"C",mode:"Aeolian",notes:["C","Eb","F","G","Ab"],formula:"1 – ♭3 – 4 – 5 – ♭6",character:"Natural minor, grounded, melancholic. The C→C octave span makes this center very accessible.",fingerprint:"The ♭6 (Ab) is the Aeolian signature — distinguishes it from Dorian's natural 6th.",range:"C4 → C5"},
+    {root:"G",mode:"Phrygian",notes:["G","Ab","C","Eb","F"],formula:"1 – ♭2 – 4 – ♭6 – ♭7",character:"Dark, tense, ancient. Spanish, Middle Eastern, and Flamenco traditions draw on this sound.",fingerprint:"The ♭2 (Ab) immediately above G is the Phrygian fingerprint — stark, unsettled tension.",range:"G3 → C5"}
+  ],
+  chords:[
+    {symbol:"Fm",   notes:["F3","Ab3","C4"], type:"Triad", desc:"The home chord — grounded, minor"},
+    {symbol:"Ab",   notes:["Ab3","C4","Eb4"],type:"Triad", desc:"Relative major — warm, lifted"},
+    {symbol:"Cm",   notes:["C4","Eb4","G4"], type:"Triad", desc:"Meditative iv chord"},
+    {symbol:"Fm7",  notes:["F3","Ab3","Eb4"],type:"Shell", desc:"Floating minor 7th — unresolved, open"},
+    {symbol:"Fsus2",notes:["F3","G3","C4"],  type:"Open",  desc:"No 3rd — ambiguous, spacious"},
+    {symbol:"AbΔ7", notes:["Ab3","Eb4","G4"],type:"Shell", desc:"Major 7 without the 3rd — luminous"}
+  ],
+  intervals:[
+    {notes:["F3","G3"],  name:"Major 2nd",   quality:"bright"},
+    {notes:["F3","Ab3"], name:"Minor 3rd",   quality:"soulful"},
+    {notes:["F3","C4"],  name:"Perfect 5th", quality:"strong"},
+    {notes:["F3","Eb4"], name:"Minor 7th",   quality:"open"},
+    {notes:["F3","F4"],  name:"Octave",      quality:"strong"},
+    {notes:["F3","G4"],  name:"Major 9th",   quality:"bright"},
+    {notes:["G3","Ab3"], name:"Minor 2nd",   quality:"tense"},
+    {notes:["G3","C4"],  name:"Perfect 4th", quality:"strong"},
+    {notes:["G3","Eb4"], name:"Minor 6th",   quality:"melancholic"},
+    {notes:["G3","F4"],  name:"Minor 7th",   quality:"open"},
+    {notes:["G3","G4"],  name:"Octave",      quality:"strong"},
+    {notes:["Ab3","C4"], name:"Major 3rd",   quality:"warm"},
+    {notes:["Ab3","Eb4"],name:"Perfect 5th", quality:"strong"},
+    {notes:["Ab3","F4"], name:"Major 6th",   quality:"lyrical"},
+    {notes:["Ab3","G4"], name:"Major 7th",   quality:"bright"},
+    {notes:["Ab3","Ab4"],name:"Octave",      quality:"strong"},
+    {notes:["C4","Eb4"], name:"Minor 3rd",   quality:"soulful"},
+    {notes:["C4","F4"],  name:"Perfect 4th", quality:"strong"},
+    {notes:["C4","G4"],  name:"Perfect 5th", quality:"strong"},
+    {notes:["C4","Ab4"], name:"Minor 6th",   quality:"melancholic"},
+    {notes:["C4","C5"],  name:"Octave",      quality:"strong"},
+    {notes:["Eb4","F4"], name:"Major 2nd",   quality:"bright"},
+    {notes:["Eb4","G4"], name:"Major 3rd",   quality:"warm"},
+    {notes:["Eb4","Ab4"],name:"Perfect 4th", quality:"strong"},
+    {notes:["Eb4","C5"], name:"Major 6th",   quality:"lyrical"},
+    {notes:["F4","G4"],  name:"Major 2nd",   quality:"bright"},
+    {notes:["F4","Ab4"], name:"Minor 3rd",   quality:"soulful"},
+    {notes:["F4","C5"],  name:"Perfect 5th", quality:"strong"},
+    {notes:["G4","Ab4"], name:"Minor 2nd",   quality:"tense"},
+    {notes:["G4","C5"],  name:"Perfect 4th", quality:"strong"},
+    {notes:["Ab4","C5"], name:"Major 3rd",   quality:"warm"}
+  ]
+};
+</script>
+<script src="handpan.js"></script>
+<script>renderInstrument(INSTRUMENT);</script>
+</body>
+</html>

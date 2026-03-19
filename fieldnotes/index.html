@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes on Handpan Sound Models &amp; Instruments</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+<div class="site-header">
+  <div class="site-title">Field Notes on Handpan Sound Models &amp; Instruments</div>
+  <div class="header-line"></div>
+  <div class="header-right" style="position:relative">
+    <button class="nav-trigger" id="nav-trigger">All Instruments ▾</button>
+    <div id="nav-popup" class="nav-popup">
+      <div class="nav-popup-label">Instruments</div>
+      <a class="nav-popup-item" href="makai-f-pygmy-variant.html">Makai F Pygmy Variant</a>
+      <a class="nav-popup-item" href="panart-hang-g-pygmy.html">Panart Hang G Pygmy</a>
+      <a class="nav-popup-item" href="pantheon-halo-c-xxd.html">Pantheon Halo C XXD</a>
+    </div>
+  </div>
+</div>
+
+<div class="index-intro">
+  <p>These are personal field notes — opinionated, specific, and incomplete by design. They document particular instruments I have played, owned, or studied closely, together with the sound models those instruments realize.</p>
+  <p>A <em>sound model</em> is the scale template: its interval structure, modal character, cultural lineage, and acoustic identity. The Pygmy scale is a sound model. But two instruments built on the Pygmy scale — even by the same maker, from the same steel — will not sound the same. Shell diameter, construction method, tuning approach, the age of the steel, the size of individual tone fields, the shape of the Gu port: all of it matters. What you hear is always a specific realization of the model, not the model itself.</p>
+  <p>These notes try to document both layers: the model and the instrument that embodies it. Where the two diverge — where a physical instrument departs from or exceeds the expectations its sound model sets — that divergence is the most interesting thing to record.</p>
+</div>
+
+<div class="index-section-label">Instruments</div>
+
+<a class="instrument-card" href="makai-f-pygmy-variant.html">
+  <div class="instrument-card-maker">Makai Handpan · January 2020 · David Galleher</div>
+  <div class="instrument-card-name">F Pygmy Variant</div>
+  <div class="instrument-card-key">F Minor · Bb Minor ensemble · Pygmy Variant</div>
+  <div class="instrument-card-desc">Meditative and harmonically open — the Variant's three modal homes give it a restlessness the Classic doesn't have. The D2 Helmholtz sits foreign to the scale, adding a dark undertow that doesn't resolve. The upper register shimmers near Bb4.</div>
+</a>
+
+<a class="instrument-card" href="panart-hang-g-pygmy.html">
+  <div class="instrument-card-maker">PANArt Hang · 2004 · Sabina Schärer · 1st Generation · Serial 2814</div>
+  <div class="instrument-card-name">G Pygmy</div>
+  <div class="instrument-card-key">G Minor · C Minor ensemble · Pygmy Classic</div>
+  <div class="instrument-card-desc">One of the original instruments; hand-sunk, signed. Warm and ceramic, with an Eb2 Helmholtz that reinforces the scale's own ♭6. The Gu bell tone is intentionally oval-shaped by the makers — audible, musical, and characteristic of early PANArt craft. The upper register shimmers; the mid-register is grounded and clear.</div>
+</a>
+
+<a class="instrument-card" href="pantheon-halo-c-xxd.html">
+  <div class="instrument-card-maker">Pantheon Steel Halo · August 2009 · Kyle Cox · Genesis · Serial 14</div>
+  <div class="instrument-card-name">C XXD (Xiao Xiong Diao)</div>
+  <div class="instrument-card-key">C Minor · F Minor ensemble · Xiao Xiong Diao</div>
+  <div class="instrument-card-desc">Baritone register, rolled steel, unusual coherence across the full range. The C2 Helmholtz sits on the root — the cavity reinforces rather than unsettles. Six notes instead of five give it more melodic vocabulary than the Pygmy instruments. Serial #14 is cited as an early masterwork.</div>
+</a>
+
+<div class="ensemble-block">
+  <div class="ensemble-block-label">Ensemble — C Natural Minor</div>
+  <div class="ensemble-block-key">C · D · E♭ · F · G · A♭ · B♭</div>
+  <div class="ensemble-block-desc">All three instruments together cover every note of C Natural Minor with no gaps and no clashes. Each occupies a different structural position: the XXD anchors the root, the Panart voices Dorian from the 5th, and the Makai visits as a modal voice. The Pygmy Classic's ensemble formula and the Pygmy Variant's solo formula are identical — they mirror each other across the ensemble/solo boundary.</div>
+  <table class="ensemble-table" style="margin-top:1rem">
+    <thead>
+      <tr>
+        <th>Instrument</th>
+        <th>Role in C Minor</th>
+        <th>Ding</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="pantheon-halo-c-xxd.html">Pantheon Halo C XXD</a></td>
+        <td>C Aeolian anchor</td>
+        <td>C3 — root</td>
+      </tr>
+      <tr>
+        <td><a href="panart-hang-g-pygmy.html">Panart Hang G Pygmy</a></td>
+        <td>C Dorian ensemble voice</td>
+        <td>G3 — 5th</td>
+      </tr>
+      <tr>
+        <td><a href="makai-f-pygmy-variant.html">Makai F Pygmy Variant</a></td>
+        <td>C Aeolian modal voice</td>
+        <td>F3 — 4th</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer">FIELD NOTES ON HANDPAN SOUND MODELS &amp; INSTRUMENTS · <span id="year"></span></div>
+
+</div><!-- .page-wrap -->
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const trigger = document.getElementById('nav-trigger');
+const popup = document.getElementById('nav-popup');
+trigger.addEventListener('click', (e) => { e.stopPropagation(); popup.classList.toggle('open'); });
+document.addEventListener('click', () => popup.classList.remove('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panart Hang G Pygmy — Field Notes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+<div class="site-header">
+  <div class="site-title"><a href="index.html">Field Notes on Handpan Sound Models &amp; Instruments</a></div>
+  <div class="header-line"></div>
+  <div class="header-right" style="position:relative">
+    <a class="md-link" href="panart-hang-g-pygmy.md">↓ md</a>
+    <button class="nav-trigger" id="nav-trigger">All Instruments ▾</button>
+    <div id="nav-popup" class="nav-popup">
+        <div class="nav-popup-label">Instruments</div>
+        <a class="nav-popup-item" href="makai-f-pygmy-variant.html">Makai F Pygmy Variant</a>
+        <a class="nav-popup-item current" href="panart-hang-g-pygmy.html">Panart Hang G Pygmy</a>
+        <a class="nav-popup-item" href="pantheon-halo-c-xxd.html">Pantheon Halo C XXD</a>
+        <div class="nav-popup-divider"></div>
+        <a class="nav-popup-home" href="index.html">← Index</a>
+      </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="card-maker" id="card-maker"></div>
+      <div class="card-type" id="card-type"></div>
+    </div>
+    <div>
+      <div class="card-key-label">Key</div>
+      <div class="card-key" id="card-key"></div>
+      <div class="card-formula" id="card-formula"></div>
+      <div class="card-key" id="card-ensemble-key" style="margin-top:0.4rem"></div>
+      <div class="card-formula" id="card-ensemble-formula"></div>
+    </div>
+  </div>
+
+  <div class="tone-section">
+    <div class="tone-label">Tone Layout <span>· tap to play</span></div>
+    <div class="tone-circle">
+      <div class="tone-ring" id="tone-ring">
+        <div class="ring-decoration"></div>
+      </div>
+    </div>
+    <div class="bass-wrap">
+      <button class="bass-btn" id="bass-btn"></button>
+    </div>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+
+  <div class="tab-content">
+    <div class="tab-panel active" id="panel-overview"></div>
+    <div class="tab-panel" id="panel-modes"></div>
+    <div class="tab-panel" id="panel-harmony"></div>
+    <div class="tab-panel" id="panel-chords"></div>
+    <div class="tab-panel" id="panel-clashes"></div>
+  </div>
+</div>
+
+<div class="footer">FIELD NOTES ON HANDPAN SOUND MODELS &amp; INSTRUMENTS · <span id="year"></span></div>
+
+</div><!-- .page-wrap -->
+
+<script>
+const INSTRUMENT = {
+  id:2, brand:"Panart", type:"Hang", selectorName:"Panart Hang G Pygmy", ding:"G3",
+  toneNotes:["C4","D4","Eb4","G4","Bb4","C5","D5","Eb5"],
+  extraBass:"Eb2",
+  scaleName:"G Pygmy",
+  scaleAliases:["Natural Minor Pentatonic","Aeolian Pentatonic","Minor ♭6 Pentatonic","Man Gong"],
+  key:"G Minor", ensembleKey:"C Minor", formula:"1 – ♭3 – 4 – 5 – ♭6", ensembleFormula:"1 – 2 – ♭3 – 5 – ♭7",
+  pitchClasses:["G","Bb","C","D","Eb"],
+  tonalAnchor:"G Minor — the Ding anchors here when played alone; everything resolves to G.",
+  harmonicIdentity:"C Minor — the 5th degree of C minor, fitting naturally into any C minor ensemble as a C Dorian voice.",
+  compatibleKeys:["G Natural Minor","G Aeolian","C Natural Minor","C Dorian","Bb Major"],
+  playableKeys:[{key:"D Minor",note:"Eb",reason:"D minor expects E natural — Eb is a ♭2nd against D. One clash, mild color tension."}],
+  playsWellWith:[
+    {id:1, name:"Makai F Pygmy Variant", url:"makai-f-pygmy-variant.html", sharedNotes:["G","C","Eb"], context:"C Minor", desc:"3 shared notes. Best played in C minor — Ab and Bb both sit naturally in C Natural Minor. Zero clashes in that context."},
+    {id:3, name:"Pantheon Halo C XXD", url:"pantheon-halo-c-xxd.html", sharedNotes:["G","C","D","Eb"], context:"C Minor", desc:"4 shared notes. Bb (Panart) is the ♭7 of C minor; F and Ab (XXD) are both in C Natural Minor. Zero clashes."}
+  ],
+  clashKeys:["A Minor","E Minor"],
+  clashNotes:{
+    "A Minor":[{note:"Bb",reason:"A minor expects B natural — Bb is a ♭2nd against A."},{note:"Eb",reason:"Eb is a tritone (♭5th) against A — the most dissonant interval."}],
+    "E Minor":[{note:"Bb",reason:"E minor expects B natural — Bb clashes as a ♭5th (tritone) against E."},{note:"Eb",reason:"E minor expects E natural — Eb directly flattens the root."}]
+  },
+  character:"Deep, grounded, and melancholic. The ♭6 (Eb) gives it a distinctly Aeolian darkness absent from the F instrument.",
+  voice:{
+    text:"Warm and ceramic — intimate but resonant, with an organic depth that hand-sunk construction gives each note a subtly individual character. Notes sustain with a full-bodied bloom rather than a quick ceramic snap. The Gu hole produces a prominent bell tone when struck at the rim[1] — more present and musical than on most handpans, with a 2nd harmonic audible above it. Beneath every note, the body resonates at Eb2[2] — the ♭6, the Aeolian signature itself — with a Bb harmonic sounding above it. Both pitches belong to the scale, so the instrument's acoustic artifacts pull inward toward its own identity rather than introducing foreign color. The upper register carries a shimmer in the top three notes[3] — C5, D5, and Eb5 sit in the interference zone for a 49 cm shell, giving the instrument a lively asymmetry between mid and upper registers.",
+    footnotes:[
+      "The Gu opening on this instrument is slightly oval — deliberately shaped by the makers to tune the bell tone to a specific pitch. Striking the rim with a flat hand produces a sustained, musical note distinct from the Ding-side tone fields. A 2nd harmonic is audible above the fundamental. This level of intentional Gu tuning is characteristic of PANArt's craft and less common on later handpans.",
+      "The Helmholtz resonance of the Gu cavity is tuned to Eb2 — the ♭6 of G Pygmy, the note that defines Aeolian against Dorian. Its 3rd harmonic sounds at Bb3, the ♭3. Unlike the Makai's D2 Helmholtz (a pitch foreign to its scale), both Eb and Bb are core tones of this instrument — the cavity resonance reinforces the scale's own darkness from below.",
+      "The wave interference zone on a 49 cm shell falls around C5–D5. This instrument's top three notes — C5, D5, Eb5 — sit in or near that range, giving the upper register more shimmer than the mid-register. It gives the Panart a characteristic liveliness at the top that contrasts with the grounded clarity below."
+    ]
+  },
+  soundModel:{text:"Pygmy Classic — the ♭6 anchors it firmly in natural minor, one dominant home: G Aeolian. Darker and more emotionally resolved than the Variant; what you hear is what it is. The Ding sits on the 5th degree of C minor[1] — in ensemble, the instrument voices as C Dorian, which shares the same pentatonic formula as the Variant's solo identity. Thus the Pygmy Classic becomes the Pygmy Variant formula in an ensemble context.",footnotes:["When a handpan's Ding sits on the 5th of a minor key, the instrument slots into ensemble as a Dorian voice for that key. Here G is the 5th of C minor, so in a C minor ensemble this Hang voices C Dorian. A pleasing symmetry follows: the Pygmy Classic's C Dorian ensemble formula (1–2–♭3–5–♭7) is identical to the Pygmy Variant's solo formula — the two instruments mirror each other across the ensemble/solo boundary."]},
+  soundModelCharacter:"The Ding G3 is flanked by C4 and D4 — a whole-step rocking motion that anchors every phrase. C and D pull at the Ding from either side; the natural tendency is to move through that lower trio and return to G as resolution. The low conversation is steady and grounded; phrases find their gravity quickly.",
+  origin:{text:"One of the defining scales of the handpan tradition[1] — a pentatonic fingerprint drawn from the interlocking vocal music of the Ba-Benzélé people of Central Africa.[2] Also known as Dorian Pentatonic and Man Gong.",footnotes:["The Pygmy scale appeared on first-generation Panart Hang instruments and became one of the defining scales of the handpan tradition. Also known as Dorian Pentatonic and, in Chinese modal terminology, Man Gong.","The Ba-Benzélé (BaAka) people of the Central African rainforest sing in dense interlocking polyphony, cycling a five-note pattern across shifting modal rotations. Ethnomusicologist Simha Arom documented these patterns in the 1960s–70s. The pentatonic fingerprint: whole step – minor third – whole step – minor third."]},
+  maker:"Sabina Schärer", madeDate:"2004",
+  material:"Nitrided steel", construction:{text:"49 cm hand sunk shell",footnote:"Hand sinking was the original PanArt technique for the 1st generation Hang: a steel blank is progressively hammered into a hemispherical form by hand, producing slight organic asymmetries that contribute to the tonal character. This labour-intensive method was replaced in later generations."},
+  serialNumber:"2814", makersMark:"Label inside — serial number and maker's signature", generation:"1st Generation",
+  distinction:{text:"A fine example of the 1st generation Hang in excellent condition, appraised by Colin Foulke[1] as an exemplar of the craft by one of the inventors of the instrument.[2]",footnotes:["Colin Foulke is a widely respected appraiser and historian of early handpan instruments, with particular expertise in 1st and 2nd generation PanArt Hang.","The Hang was invented by Felix Rohner and Sabina Schärer of PanArt in Bern, Switzerland, first presented publicly in 2001. Sabina Schärer signed this instrument. PanArt ceased production of the 1st generation Hang around 2005."]},
+  modalCenters:[
+    {root:"G",mode:"Aeolian",notes:["G","Bb","C","D","Eb"],formula:"1 – ♭3 – 4 – 5 – ♭6",character:"Deep natural minor. The Ding anchors this center — dark, grounded, melancholic.",fingerprint:"The ♭6 (Eb) is the Aeolian signature — distinguishes it from Dorian which would have a natural 6th.",range:"Full instrument"},
+    {root:"C",mode:"Dorian",notes:["C","D","Eb","G","Bb"],formula:"1 – 2 – ♭3 – 5 – ♭7",character:"Soulful and open — same modal flavor as the F Pygmy instrument's home mode. C→C octave is very natural on this layout.",fingerprint:"Natural 2nd (D) beside a minor 3rd (Eb) — brighter than pure minor, jazzier.",range:"C4 → C5 (and C5 → Eb5)"},
+    {root:"D",mode:"Phrygian",notes:["D","Eb","G","Bb","C"],formula:"1 – ♭2 – 4 – ♭6 – ♭7",character:"Ancient, tense, and modal. The half-step Eb immediately above D creates the signature Phrygian darkness.",fingerprint:"The ♭2 (Eb) directly above D is the Phrygian fingerprint — stark, unsettled, Flamenco-adjacent.",range:"D4 → D5"}
+  ],
+  chords:[
+    {symbol:"Gm",    notes:["G3","Bb4","D5"], type:"Triad", desc:"The home chord — deep, minor"},
+    {symbol:"Cm",    notes:["C4","Eb4","G4"], type:"Triad", desc:"iv chord — grounded, natural"},
+    {symbol:"Eb",    notes:["Eb4","G4","Bb4"],type:"Triad", desc:"Relative major — warm, lifted"},
+    {symbol:"Gsus4", notes:["G3","C4","D4"],  type:"Open",  desc:"No 3rd — open, suspended"},
+    {symbol:"Cm7",   notes:["C4","Eb4","Bb4"],type:"Shell", desc:"Minor 7th shell — soulful, open"}
+  ],
+  intervals:[
+    {notes:["G3","C4"],  name:"Perfect 4th", quality:"strong"},
+    {notes:["G3","D4"],  name:"Perfect 5th", quality:"strong"},
+    {notes:["G3","Eb4"], name:"Minor 6th",   quality:"melancholic"},
+    {notes:["G3","Bb4"], name:"Minor 3rd",   quality:"soulful"},
+    {notes:["C4","D4"],  name:"Major 2nd",   quality:"bright"},
+    {notes:["C4","Eb4"], name:"Minor 3rd",   quality:"soulful"},
+    {notes:["C4","G4"],  name:"Perfect 5th", quality:"strong"},
+    {notes:["C4","Bb4"], name:"Minor 7th",   quality:"open"},
+    {notes:["D4","Eb4"], name:"Minor 2nd",   quality:"tense"},
+    {notes:["D4","G4"],  name:"Perfect 4th", quality:"strong"},
+    {notes:["D4","Bb4"], name:"Minor 6th",   quality:"melancholic"},
+    {notes:["Eb4","G4"], name:"Major 3rd",   quality:"warm"},
+    {notes:["Eb4","Bb4"],name:"Perfect 5th", quality:"strong"},
+    {notes:["Bb4","C5"], name:"Major 2nd",   quality:"bright"},
+    {notes:["Bb4","D5"], name:"Major 3rd",   quality:"warm"},
+    {notes:["Bb4","Eb5"],name:"Perfect 4th", quality:"strong"}
+  ]
+};
+</script>
+<script src="handpan.js"></script>
+<script>renderInstrument(INSTRUMENT);</script>
+</body>
+</html>
